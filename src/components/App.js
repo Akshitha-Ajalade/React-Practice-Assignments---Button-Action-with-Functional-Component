@@ -3,18 +3,24 @@ import "./../styles/App.css";
 
 function App() {
   const state = useState();
-  const [para, setPara] = useState("hello");
+  const [para, setPara] = useState(false);
 
-  const updatePara = () => {
-    setPara(
-      "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-    );
-  };
+  // const updatePara = () => {
+  //   setPara(
+  //     "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+  //   );
+  // };
   return (
     <div id="main">
-      <p id="para">{para}</p>
-      <button id="click" onClick={updatePara}>
-        click me
+      {para ? (
+        <p id="para">
+          Hello, I've learnt to use the full-stack evaluation tool. This makes
+          me so happy{" "}
+        </p>
+      ) : null}
+      <button id="click" onClick={() => setPara(!para)}>
+        {" "}
+        toggle{" "}
       </button>
     </div>
   );
