@@ -19,8 +19,7 @@ function App() {
         </p>
       ) : null}
       <button id="click" onClick={() => setPara(!para)}>
-        {" "}
-        toggle{" "}
+        toggle
       </button>
     </div>
   );
